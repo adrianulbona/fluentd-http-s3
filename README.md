@@ -15,7 +15,7 @@ docker build -t adrianulbona/fluentd-http-s3:latest .
 ### run
 
 ```bash
-docker run --rm -p 9880:9880 --env-file ${PWD}/conf:/fluentd/etc adrianulbona/fluentd-http-s3:latest
+docker run --rm -p 9880:9880 --env-file .env -v ${PWD}/conf:/fluentd/etc adrianulbona/fluentd-http-s3:latest
 ```
 
 ### publish records
@@ -29,7 +29,7 @@ curl -X POST -d 'json={"blob":"elementary, my dear Watson"}' http://localhost:98
 ### check batches
 
 ```bash
-aws s3 ls --recursive adrianulbona-playground
+aws s3 ls --recursive s3://fluentd-blackhole
 2020-03-01 18:25:03         66 logs/year=2020/month=03/day=01/2020030117_0.json.gz
 2020-03-01 18:26:02         47 logs/year=2020/month=03/day=01/2020030117_1.json.gz
 ```
