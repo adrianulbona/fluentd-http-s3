@@ -15,10 +15,8 @@ docker build -t adrianulbona/fluentd-http-s3:latest .
 ### 3) run
 
 ```console
-docker run --rm -p 9880:9880 \
-    --env-file .env \
-    -v ${PWD}/conf:/fluentd/etc \
-    adrianulbona/fluentd-http-s3:latest
+docker run --rm -p 9880:9880 -v ${PWD}/conf:/fluentd/etc \
+    --env-file .env adrianulbona/fluentd-http-s3:latest
 ```
 
 ### 4) publish records
