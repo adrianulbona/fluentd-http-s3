@@ -1,6 +1,6 @@
 # fluentd-http-s3
 
-A template service for batching JSON objects through HTTP to AWS S3 using [fluentd](https://www.fluentd.org/).
+A template service for batching JSON objects through HTTP to AWS S3 based on [fluentd](https://www.fluentd.org/).
 
 ### 1) build 
 
