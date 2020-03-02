@@ -35,7 +35,7 @@ aws s3 ls --recursive s3://fluentd-blackhole
 ```
 
 ### 6) follow-up
-
+- consistency analysis. are any records lost?
 - failover analysis. will persistent volumes solve the situation when the service dies "in the middle of a batch"? 
 - nice to have: performance analysis + vertical scaling analysis
 
